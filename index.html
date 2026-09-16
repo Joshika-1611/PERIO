@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PERIO | Menstrual Wellness</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- ========================================= -->
+<!-- WELCOME -->
+<!-- ========================================= -->
+
+<section
+    id="welcomeScreen"
+    class="screen active"
+>
+
+    <div class="welcome-card">
+
+        <div class="logo">
+            PERIO
+        </div>
+
+        <div class="logo-subtitle">
+            Personalized Menstrual Wellness
+        </div>
+
+        <div class="welcome-icon">
+            🌸
+        </div>
+
+        <h1>
+            Understand your body.
+        </h1>
+
+        <p>
+            PERIO combines physiological signals
+            and your symptoms to provide
+            personalized and explainable wellness insights.
+        </p>
+
+        <button
+            id="startButton"
+            class="primary-button"
+        >
+            Start Assessment
+        </button>
+
+        <p class="privacy-note">
+            Prototype for wellness awareness,
+            not a medical diagnosis.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- ASSESSMENT -->
+<!-- ========================================= -->
+
+<section
+    id="assessmentScreen"
+    class="screen"
+>
+
+    <div class="page-container">
+
+        <div class="top-header">
+
+            <div>
+
+                <div class="small-logo">
+                    PERIO
+                </div>
+
+                <h1>
+                    How are you feeling?
+                </h1>
+
+            </div>
+
+            <div class="live-dot">
+                ● LIVE
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>
+                Your symptoms
+            </h2>
+
+            <p class="section-description">
+                Tell PERIO how you are feeling right now.
+            </p>
+
+
+            <!-- PAIN -->
+
+            <div class="slider-group">
+
+                <div class="slider-title">
+
+                    <span>
+                        Discomfort / Pain
+                    </span>
+
+                    <strong id="painValue">
+                        0
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="pain"
+                    min="0"
+                    max="10"
+                    value="0"
+                >
+
+                <div class="range-labels">
+                    <span>None</span>
+                    <span>Severe</span>
+                </div>
+
+            </div>
+
+
+            <!-- STRESS -->
+
+            <div class="slider-group">
+
+                <div class="slider-title">
+
+                    <span>
+                        Stress
+                    </span>
+
+                    <strong id="stressValue">
+                        0
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="stress"
+                    min="0"
+                    max="10"
+                    value="0"
+                >
+
+                <div class="range-labels">
+                    <span>Calm</span>
+                    <span>Very stressed</span>
+                </div>
+
+            </div>
+
+
+            <!-- FATIGUE -->
+
+            <div class="slider-group">
+
+                <div class="slider-title">
+
+                    <span>
+                        Fatigue
+                    </span>
+
+                    <strong id="fatigueValue">
+                        0
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="fatigue"
+                    min="0"
+                    max="10"
+                    value="0"
+                >
+
+                <div class="range-labels">
+                    <span>Energetic</span>
+                    <span>Very tired</span>
+                </div>
+
+            </div>
+
+
+            <!-- FLOW -->
+
+            <div class="input-section">
+
+                <h3>
+                    Menstrual flow
+                </h3>
+
+                <div class="radio-group">
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="flow"
+                            value="light"
+                            checked
+                        >
+
+                        <span>
+                            Light
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="flow"
+                            value="medium"
+                        >
+
+                        <span>
+                            Medium
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="flow"
+                            value="heavy"
+                        >
+
+                        <span>
+                            Heavy
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- SYMPTOMS -->
+
+            <div class="input-section">
+
+                <h3>
+                    Symptoms
+                </h3>
+
+                <div class="symptoms">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            class="symptom"
+                            value="cramps"
+                        >
+
+                        <span>
+                            🤕 Cramps
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            class="symptom"
+                            value="headache"
+                        >
+
+                        <span>
+                            🤯 Headache
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            class="symptom"
+                            value="dizziness"
+                        >
+
+                        <span>
+                            😵 Dizziness
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            class="symptom"
+                            value="nausea"
+                        >
+
+                        <span>
+                            🤢 Nausea
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            class="symptom"
+                            value="fatigue"
+                        >
+
+                        <span>
+                            🥱 Fatigue
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="analyzeButton"
+                class="primary-button full-button"
+            >
+                Analyze My Wellness
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- RESULTS -->
+<!-- ========================================= -->
+
+<section
+    id="resultsScreen"
+    class="screen"
+>
+
+    <div class="page-container">
+
+
+        <!-- HEADER -->
+
+        <div class="results-header">
+
+            <div>
+
+                <div class="small-logo">
+                    PERIO
+                </div>
+
+                <h1>
+                    Your Wellness Insights
+                </h1>
+
+            </div>
+
+            <div class="live-status">
+                ● LIVE DATA
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- SENSOR DATA -->
+        <!-- ================================= -->
+
+        <div class="section-heading">
+            LIVE PHYSIOLOGY
+        </div>
+
+
+        <div class="sensor-grid">
+
+
+            <!-- HEART RATE -->
+
+            <div class="sensor-card">
+
+                <div class="sensor-icon">
+                    ❤️
+                </div>
+
+                <div class="sensor-label">
+                    Heart Rate
+                </div>
+
+                <div
+                    id="heartRate"
+                    class="sensor-value"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <!-- SPO2 -->
+
+            <div class="sensor-card">
+
+                <div class="sensor-icon">
+                    🫁
+                </div>
+
+                <div class="sensor-label">
+                    SpO₂
+                </div>
+
+                <div
+                    id="spo2"
+                    class="sensor-value"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <!-- ECG -->
+
+            <div class="sensor-card">
+
+                <div class="sensor-icon">
+                    📈
+                </div>
+
+                <div class="sensor-label">
+                    ECG Signal
+                </div>
+
+                <div
+                    id="ecg"
+                    class="sensor-value"
+                >
+                    --
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- SCORES -->
+        <!-- ================================= -->
+
+        <div class="section-heading">
+            WELLNESS INSIGHTS
+        </div>
+
+
+        <div class="score-grid">
+
+
+            <!-- DISCOMFORT -->
+
+            <div class="score-card">
+
+                <div class="score-icon">
+                    😣
+                </div>
+
+                <div class="score-title">
+                    Discomfort
+                </div>
+
+                <div
+                    id="painScore"
+                    class="score-number"
+                >
+                    0
+                </div>
+
+                <div
+                    id="painStatus"
+                    class="score-status"
+                >
+                    LOW
+                </div>
+
+            </div>
+
+
+            <!-- STRESS -->
+
+            <div class="score-card">
+
+                <div class="score-icon">
+                    🧠
+                </div>
+
+                <div class="score-title">
+                    Stress
+                </div>
+
+                <div
+                    id="stressScore"
+                    class="score-number"
+                >
+                    0
+                </div>
+
+                <div
+                    id="stressStatus"
+                    class="score-status"
+                >
+                    LOW
+                </div>
+
+            </div>
+
+
+            <!-- ANEMIA -->
+
+            <div class="score-card">
+
+                <div class="score-icon">
+                    🩸
+                </div>
+
+                <div class="score-title">
+                    Anemia-related Risk Indicator
+                </div>
+
+                <div
+                    id="anemiaScore"
+                    class="score-number"
+                >
+                    0
+                </div>
+
+                <div
+                    id="anemiaStatus"
+                    class="score-status"
+                >
+                    LOW
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- WHY SCORE -->
+        <!-- ================================= -->
+
+        <div class="explain-card">
+
+            <div class="explain-header">
+
+                <div class="explain-icon">
+                    🔍
+                </div>
+
+                <div>
+
+                    <h2>
+                        Why am I getting this score?
+                    </h2>
+
+                    <p>
+                        PERIO explains the main factors
+                        contributing to your wellness indicators.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="explanation"
+                class="explanation-content"
+            >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- WHAT CAN I DO -->
+        <!-- ================================= -->
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-header">
+
+                <div class="recommendation-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <h2>
+                        What can I do?
+                    </h2>
+
+                    <p>
+                        Personalized wellness suggestions
+                        based on your current condition.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="recommendations"
+                class="recommendations"
+            >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- WARNING -->
+        <!-- ================================= -->
+
+        <div
+            id="warningBox"
+            class="warning-box hidden"
+        >
+
+            <div class="warning-icon">
+                ⚠️
+            </div>
+
+            <div>
+
+                <strong>
+                    Please pay attention to your symptoms
+                </strong>
+
+                <p>
+                    If symptoms are severe, persistent,
+                    worsening, or concerning, consider
+                    seeking advice from a qualified
+                    healthcare professional.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- ACTION BUTTONS -->
+        <!-- ================================= -->
+
+        <div class="action-grid">
+
+            <button
+                id="breathingButton"
+                class="secondary-button"
+            >
+                🫁 Guided Breathing
+            </button>
+
+
+            <button
+                id="reassessButton"
+                class="secondary-button"
+            >
+                🔄 Reassess
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- BREATHING -->
+        <!-- ================================= -->
+
+        <div
+            id="breathingBox"
+            class="breathing-box hidden"
+        >
+
+            <h2>
+                Guided Breathing
+            </h2>
+
+            <p>
+                Follow the circle and breathe slowly.
+            </p>
+
+
+            <div
+                id="breathingCircle"
+                class="breathing-circle"
+            >
+
+                <span>
+                    Breathe
+                </span>
+
+            </div>
+
+
+            <div
+                id="breathingText"
+                class="breathing-text"
+            >
+                Ready
+            </div>
+
+
+            <button
+                id="stopBreathing"
+                class="secondary-button"
+            >
+                Stop
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- DISCLAIMER -->
+        <!-- ================================= -->
+
+        <div class="disclaimer">
+
+            <strong>
+                PERIO Prototype
+            </strong>
+
+            <p>
+                These indicators are experimental
+                wellness-support outputs and are not
+                medical diagnoses.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
